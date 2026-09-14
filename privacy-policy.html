@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Ember</title>
+<meta name="description" content="How the app handles data — including the notifications it reads, and what it never keeps.">
+<style>
+:root {
+  color-scheme: light dark;
+  --ground: #FBFAF8;
+  --panel:  #FFFFFF;
+  --line:   #E3E0DA;
+  --ink:    #1D1B21;
+  --ink-2:  #55525C;
+  --ink-3:  #86828F;
+  --ember:  #C2560F;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #141318;
+    --panel:  #1B1A20;
+    --line:   #34323B;
+    --ink:    #F5F0E8;
+    --ink-2:  #A9A5B0;
+    --ink-3:  #6F6B79;
+    --ember:  #FFB347;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 44rem; margin: 0 auto; padding-block: 3.5rem 5rem; padding-left: 1.25rem; padding-right: 1.25rem; }
+a { color: var(--ember); text-decoration-thickness: 1px; text-underline-offset: 2px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; border-radius: 2px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 1.4rem; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: 1.22rem; margin: 2.4rem 0 0.7rem; text-wrap: balance; }
+h3 { font-size: 1.02rem; margin: 1.7rem 0 0.5rem; color: var(--ink-2); }
+p, li { color: var(--ink-2); }
+li { margin: 0.3rem 0; }
+strong { color: var(--ink); font-weight: 600; }
+code {
+  font: 0.88em/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 3px; padding: 0.08em 0.34em;
+}
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.2rem 0; }
+.scroll { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+th, td { text-align: left; padding: 0.55rem 0.9rem 0.55rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--ink); font-weight: 600; }
+td { color: var(--ink-2); }
+.eyebrow {
+  font-size: 0.74rem; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ink-3); margin: 0 0 0.9rem;
+}
+.back { display: inline-block; margin-bottom: 2.2rem; font-size: 0.9rem; }
+.index-list { display: flex; flex-direction: column; gap: 0; margin: 2rem 0 0; padding: 0; list-style: none; }
+.index-list li { margin: 0; border-top: 1px solid var(--line); }
+.index-list li:last-child { border-bottom: 1px solid var(--line); }
+.index-list a { display: block; padding: 1.1rem 0; text-decoration: none; color: var(--ink); font-weight: 600; }
+.index-list a:hover .t { text-decoration: underline; }
+.index-list .d { display: block; font-weight: 400; font-size: 0.93rem; color: var(--ink-2); margin-top: 0.2rem; }
+footer { margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--line); font-size: 0.87rem; color: var(--ink-3); }
+</style>
+</head>
+<body>
+<div class="page">
+<a class="back" href="./">← Ember legal documents</a>
+<h1>Privacy Policy — Ember</h1>
+<p><strong>Effective date:</strong> 2026-09-14 <strong>Version:</strong> 1.4 <strong>Application:</strong> Ember (<code>com.ember.app</code>) <strong>Publisher:</strong> Paul Rabiller, 745A Havelock Road, Singapore 169657 <strong>Contact:</strong> <a href="mailto:contact.app.ember@gmail.com">contact.app.ember@gmail.com</a></p>
+<p>This policy is written in English. English is the authoritative version.</p>
+<hr>
+<h2>1. Summary</h2>
+<p>Ember runs entirely on your device.</p>
+<ul><li>There is no server, no account, and no cloud service operated by the publisher.</li><li>No data from the app is ever sent to the publisher automatically, and the publisher has no technical means of accessing it.</li><li>There is no analytics, no crash reporting, no advertising, and no third-party tracking of any kind.</li><li>Android&#x27;s built-in backup stores an encrypted copy of your app data in your own Google account.</li></ul>
+<p>Two features deserve a careful read: <strong>reading notifications</strong>, which involves information about other people, explained in full in section 3; and the <strong>optional diagnostic</strong> you may attach to a support email, explained in section 5.</p>
+<hr>
+<h2>2. Permissions Ember uses</h2>
+<p><strong>Notification access</strong> (optional, off by default). A special access you enable manually in Android Settings. It powers automatic contact detection. See section 3.</p>
+<p><strong>Notification posting</strong> (<code>POST_NOTIFICATIONS</code>). Required from Android 13 onward so Ember can show you its own reminders. Nothing to do with reading other apps&#x27; notifications. Ember says so at the moment it asks, because being asked about notifications twice in one sitting is genuinely confusing.</p>
+<p>Ember <strong>requests</strong> no other permission of its own. What the manifest carries beyond that, and why:</p>
+<ul><li><strong>No contacts permission.</strong> Ember never reads your address book. There is no code in the app that touches the system contacts provider.</li><li><strong>No storage permission.</strong> Export uses Android&#x27;s native file picker, which grants access only to the single file you choose.</li><li><strong>Internet permission: declared, and unused by Ember.</strong> The merged manifest does carry <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code>. Neither is requested by Ember: both are pulled in by Google Play Billing, through a Google component it depends on, and they are what lets Play reach Google&#x27;s own servers to process a purchase. <strong>No code in Ember opens a network connection</strong>, and the app has no server to connect to. The only thing that deliberately goes online is your own browser, when you tap the refund link in Settings.</li></ul>
+<p>We would rather tell you the permission is there than claim an absence you could disprove by opening the app&#x27;s page on Google Play. An automated check on every build lists every permission in the published manifest, with where each one comes from; a new one cannot appear unnoticed.</p>
+<hr>
+<h2>3. Notification access — what is read and what is kept</h2>
+<p>Ember offers an optional feature that detects when a friend has contacted you, so you do not have to record it by hand. It is off by default, and the app is fully usable without it.</p>
+<h3>What Ember reads</h3>
+<p>When the feature is enabled, Ember examines notifications from <strong>three applications only</strong>: WhatsApp, Facebook Messenger, and Instagram. A notification from any other application is discarded on arrival, before any of its content is read.</p>
+<p>From a qualifying notification, Ember reads the sender&#x27;s identifier and the display name shown in the conversation.</p>
+<h3>The pool of observed people</h3>
+<p><strong>Please read this section carefully — it concerns people other than you.</strong></p>
+<p>To let you link a friend without typing identifiers by hand, Ember maintains a local pool of the people it has observed on those three platforms. Each entry holds the display name as the platform showed it, and the platform-specific identifier attached to that conversation.</p>
+<p>This pool covers <strong>both one-to-one and group conversations</strong>. For someone seen in a group, Ember also stores <strong>the name of that group</strong> — not its messages, only its name, and only so that the linking screen can tell two people with the same display name apart.</p>
+<p>This means the pool can contain people you have not added as friends in Ember, and may never add. Their names sit in Ember&#x27;s local database as candidates for linking.</p>
+<p>Entries you have not linked to anyone are <strong>erased automatically after 30 days</strong>. Entries you have linked are kept, so that a friend you speak to twice a year stays verifiable. You can also empty the pool yourself at any time — see section 9.</p>
+<p>The pool never leaves your device except inside your own Android backup, described in section 6. It is never transmitted to the publisher, never shared, and the publisher cannot see it.</p>
+<h3>What Ember records as contact</h3>
+<p>When a notification matches an identifier you have linked to a friend, Ember records <strong>three things</strong>: the date and time, which app it came from, and the nature of the exchange — a direct message, a group message, or a call. Nothing else from the notification is recorded.</p>
+<h3>What Ember never keeps</h3>
+<p><strong>The content of your messages is never stored.</strong> Message text is never saved, never written to any file, and never written to any log. It is not retained beyond the instant the notification is handled.</p>
+<h3>How linking works</h3>
+<p>You type your friend&#x27;s name yourself — Ember never fills it in for you. You then attach one or more entries from the pool to that friend. Removing a friend removes their contact events, notes, and links.</p>
+<h3>Your consent is tied to this text</h3>
+<p>When the disclosure screen changes in substance — a platform added, a new field retained, a longer retention period — Ember records that the text has changed and <strong>shows it to you again</strong> before the feature resumes. A consent given for one description does not silently carry over to another.</p>
+<h3>Revoking access</h3>
+<p>You can withdraw Notification Access at any time in <strong>Android Settings → Apps → Special app access → Notification access</strong>, or from Ember&#x27;s own Settings. Ember stops reading notifications immediately. Data already recorded remains until you delete it.</p>
+<hr>
+<h2>4. What Ember stores on your device</h2>
+<ul><li>Friends you created: the name you typed, plus any notes, birthday, or favourite marking you added.</li><li>The pool of observed people described in section 3.</li><li>Links between your friends and pool entries.</li><li>Contact events: date and time, platform, and nature of the exchange.</li><li>App settings, and your answer to the disclosure screen with the version of the text you saw.</li><li>Two timestamps recording when your free trial started, so that it cannot be restarted. Neither contains anything personal.</li><li>The date detection last recognised anyone, used to warn you if detection has silently stopped working.</li></ul>
+<p>All of it lives in a local database on your device.</p>
+<hr>
+<h2>5. What the publisher receives</h2>
+<p>Nothing automatically. Ember never transmits anything to the publisher on its own.</p>
+<p>The publisher receives personal data from you only if <strong>you</strong> choose to send an email to <a href="mailto:contact.app.ember@gmail.com">contact.app.ember@gmail.com</a>. In that case the publisher receives your email address and whatever you write, uses it solely to answer you, and keeps it no longer than needed for that purpose. This is the only circumstance in which the publisher acts as a data controller in respect of your data.</p>
+<h3>The optional diagnostic</h3>
+<p>Ember&#x27;s Settings contain a &quot;Something wrong, or an idea?&quot; entry that opens <strong>your own email app</strong>, with the address and subject filled in. Ember does not send anything itself; you write, read and send the message.</p>
+<p>A checkbox, <strong>on by default</strong>, inserts a short diagnostic block into the body of that message. It is plain text, sitting in the email in front of you: you can read it and delete it before sending.</p>
+<p>It contains <strong>counts and states, never content</strong>:</p>
+<div class="scroll"><table><thead><tr><th>Included</th><th>Never included</th></tr></thead><tbody><tr><td>App version and build number</td><td>Any friend&#x27;s name</td></tr><tr><td>Android version, device model, interface language</td><td>Any platform identifier, account ID, or link</td></tr><tr><td>Number of friends tracked, number paused</td><td>The text of any note</td></tr><tr><td>Number of links per platform</td><td>Any birthday</td></tr><tr><td>Number of exchanges in the last 30 days, number of notes</td><td>Any group name or observed display name</td></tr><tr><td>Whether notification access is granted, which sources are on</td><td>The content of any notification</td></tr><tr><td>Your plan and trial days remaining</td><td>The exact timestamp of any exchange</td></tr><tr><td>How long ago detection last recognised anyone, in days</td><td>—</td></tr></tbody></table></div>
+<p>The last row is deliberately expressed in days rather than as a date: a precise timestamp would tell the publisher when somebody messaged you.</p>
+<hr>
+<h2>6. Backup</h2>
+<p>Ember uses Android&#x27;s built-in <strong>Auto Backup for Apps</strong>. This is a platform feature, available to all users on all plans, not something the publisher operates.</p>
+<ul><li><strong>What is backed up:</strong> everything Ember stores on your device — friends, links, notes, birthdays, favourites, contact events, settings, the trial timestamps, <strong>and the pool of observed people</strong> described in section 3.</li><li><strong>Where it goes:</strong> the backup space Android reserves in your own Google account. It does <strong>not</strong> consume your personal Google Drive storage quota.</li><li><strong>Encryption:</strong> your data is encrypted <strong>on your device, before it is uploaded</strong>, using a key derived from your device&#x27;s lock screen. Google cannot read the contents, and neither can the publisher.</li><li><strong>Your control:</strong> you can disable backup, and delete existing backups, in your Android and Google account settings. <strong>Uninstalling Ember does not automatically remove a backup already made.</strong></li></ul>
+<p>The publisher has no access to backups and no way to request them.</p>
+<p>A note on the pool, since it concerns people other than you: it is included in the backup because Android&#x27;s backup rules operate on files, and the pool shares a single database with everything else. Separating it would mean a second database for no meaningful gain, given that the backup is encrypted on your device, lands in your own account, and is unreadable to Google and to the publisher alike. We would rather tell you it is there than claim an exclusion that does not exist.</p>
+<hr>
+<h2>7. Payments</h2>
+<p>Premium is a one-time purchase processed entirely by <strong>Google Play Billing</strong>. Google handles the payment and receives the payment information. The publisher never receives, sees, or stores your payment details, card number, or billing address, and receives only aggregate, anonymised sales reporting from Google.</p>
+<p>Google&#x27;s handling of that data is governed by Google&#x27;s own privacy policy.</p>
+<hr>
+<h2>8. Sharing</h2>
+<p>The app shares no data with anyone. There are no third-party SDKs in the app other than Google Play Billing. There are no advertising partners, no analytics providers, and no data brokers.</p>
+<p>The publisher does not sell, rent, or share personal data, because the publisher does not receive any.</p>
+<hr>
+<h2>9. Your control over your data</h2>
+<p><strong>Export.</strong> Ember can export your data as a versioned JSON file through Android&#x27;s native file picker. The file is produced on your device and goes only where you send it.</p>
+<p><strong>Import.</strong> You can restore from an export file. Importing <strong>replaces your existing data entirely</strong> — it does not merge. The confirmation prompt says so before you proceed.</p>
+<p><strong>Deleting a friend.</strong> Removing a friend deletes their contact events, notes, and links.</p>
+<p><strong>Clearing observed people.</strong> The pool screen has an action that empties the pool of everyone you have <strong>not</strong> linked to a friend. People you have linked are left untouched, so clearing the pool never interrupts any tracking you have set up.</p>
+<p><strong>Deleting everything.</strong> Settings contains an <strong>Erase all my data</strong> action that removes your friends, links, the pool, contact events, notes, birthdays, favourites, and settings. Because it cannot be undone, it asks you to type the word <code>ERASE</code> to confirm.</p>
+<p>Two technical values are kept: the timestamps recording that your free trial has already run. They contain no identifier and nothing personal, and they are retained so the action cannot be used to restart the trial. The confirmation dialog states this before you proceed. Any purchase you made is also kept, and is restored automatically by Google Play.</p>
+<p>You can also use <strong>Android Settings → Apps → Ember → Storage → Clear data</strong>, or uninstall the app. Both remove everything Ember holds on the device, including those timestamps.</p>
+<p><strong>Backups</strong> made through Android&#x27;s backup system must be removed separately, through your Google account settings.</p>
+<p>If you have emailed the publisher and want that correspondence deleted, write to <a href="mailto:contact.app.ember@gmail.com">contact.app.ember@gmail.com</a>.</p>
+<hr>
+<h2>10. Children</h2>
+<p>Ember is not directed at children. It is intended for users aged 16 and over. The publisher does not knowingly collect data from anyone, including children, as no data is collected at all.</p>
+<hr>
+<h2>11. Legal basis and applicable law</h2>
+<p>The publisher is an individual established in Singapore.</p>
+<p><strong>Singapore (PDPA).</strong> The only personal data the publisher collects is email correspondence you initiate, used solely to respond to you.</p>
+<p><strong>European Economic Area and United Kingdom (GDPR / UK GDPR).</strong> The data Ember processes on your device — including the pool of observed people described in section 3 — is processed by you, on your own device, for your own personal and household purposes. That falls outside the scope of the GDPR under Article 2(2)(c). The publisher is not a controller or processor of that data and has no access to it. For email correspondence you send to the publisher, the legal basis is the publisher&#x27;s legitimate interest in responding to you (Article 6(1)(f)), and you may request access to or deletion of that correspondence.</p>
+<p>Other jurisdictions: the same facts apply — no collection, no transmission, no third-party sharing.</p>
+<hr>
+<h2>12. Security</h2>
+<p>Your data is protected by your device&#x27;s own security: screen lock, device encryption, and Android&#x27;s application sandbox, which prevents other apps from reading Ember&#x27;s data. Backups are encrypted on your device before upload. Because the app transmits nothing to the publisher, there is no server to breach.</p>
+<p>Keeping your device locked and up to date is the most effective protection for your Ember data.</p>
+<hr>
+<h2>13. Changes to this policy</h2>
+<p>If this policy changes materially — in particular if the app&#x27;s data handling ever changes — the updated policy will be published at <a href="https://paulrabiller.github.io/ember-legal/">https://paulrabiller.github.io/ember-legal/</a> and shipped in the app, and you will be asked to review the notification disclosure again before the affected feature resumes.</p>
+<hr>
+<h2>14. Contact</h2>
+<p>Paul Rabiller 745A Havelock Road, Singapore 169657 <a href="mailto:contact.app.ember@gmail.com">contact.app.ember@gmail.com</a></p>
+<footer>
+  Ember — published by Paul Rabiller, Singapore.
+  <a href="mailto:contact.app.ember@gmail.com">contact.app.ember@gmail.com</a><br>
+  These documents are also shipped inside the app, in English and French, and readable offline.
+</footer>
+</div>
+</body>
+</html>
