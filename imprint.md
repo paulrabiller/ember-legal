@@ -1,14 +1,14 @@
 # About & Publisher Information — Ember
 
-**Effective date:** 2026-09-14
-**Version:** 1.1
+**Effective date:** 2026-09-17
+**Version:** 1.2
 
 ---
 
 ## Application
 
 **Name:** Ember
-**Package:** `com.ember.app`
+**Package:** `com.embers.app`
 **Version:** shown in the app, read from the build
 **Distribution:** Google Play
 

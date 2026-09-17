@@ -1,8 +1,8 @@
 # Terms of Use — Ember
 
-**Effective date:** 2026-09-14
-**Version:** 1.3
-**Application:** Ember (`com.ember.app`)
+**Effective date:** 2026-09-17
+**Version:** 1.4
+**Application:** Ember (`com.embers.app`)
 **Publisher:** Paul Rabiller, 745A Havelock Road, Singapore 169657
 **Contact:** contact.app.ember@gmail.com
 
