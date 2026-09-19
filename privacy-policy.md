@@ -1,7 +1,7 @@
 # Privacy Policy — Ember
 
-**Effective date:** 2026-09-17
-**Version:** 1.5
+**Effective date:** 2026-09-19
+**Version:** 1.6
 **Application:** Ember (`com.embers.app`)
 **Publisher:** Paul Rabiller, 745A Havelock Road, Singapore 169657
 **Contact:** contact.app.ember@gmail.com
@@ -49,10 +49,21 @@ why:
   Google's own servers to process a purchase. **No code in Ember opens a network connection**, and
   the app has no server to connect to. The only thing that deliberately goes online is your own
   browser, when you tap the refund link in Settings.
+- **Four more, declared by libraries, not by Ember.** None of them lets Ember read or send
+  anything.
+  - `com.android.vending.BILLING`: Google Play Billing, the tool Google requires for selling
+    Premium on Google Play.
+  - `WAKE_LOCK`, `RECEIVE_BOOT_COMPLETED` and `FOREGROUND_SERVICE`: Android's WorkManager, the
+    component that schedules Ember's periodic reminders. It keeps the device awake for the moment
+    a scheduled task takes, and reschedules those tasks after a restart. The third permission is
+    for tasks WorkManager can run in the foreground; Ember never asks it to.
 
-  We would rather tell you the permission is there than claim an absence you could disprove by
-  opening the app's page on Google Play. An automated check on every build lists every permission in
-  the published manifest, with where each one comes from; a new one cannot appear unnoticed.
+  The manifest also carries one internal permission that Android's own libraries generate, scoped
+  to Ember itself; it grants nothing to Ember or to any other app.
+
+We would rather tell you these permissions are there than claim an absence you could disprove by
+opening the app's page on Google Play. An automated check on every build lists every permission in
+the published manifest, with where each one comes from; a new one cannot appear unnoticed.
 
 ---
 
